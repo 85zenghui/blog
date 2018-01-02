@@ -869,14 +869,14 @@
 	<body>
 		<div class="waikuan">
 			<div id="parallax_area1">
-				<div class="waikuan-01">
+				<div class="waikuan-01" id="zhuye">
 					<div class="toubu">
        	  	        	<a href="#parallax_area1"><img src="images/logo.png" class="logo" ></a>
 						<ul class="daohang">
-       	  					<li><a href="#parallax_area1">首页</a></li>
-       	  					<li><a href="#parallax_area1">关于</a></li>
-       	  					<li><a href="#parallax_area1">作品</a></li>
-       	  					<li><a href="#parallax_area1">留言</a></li>
+       	  					<li><a href="javascript:void(0);" onclick="naver('zhuye')">首页</a></li>
+       	  					<li><a href="javascript:void(0);" onclick="naver('A')">关于</a></li>
+       	  					<li><a href="javascript:void(0);" onclick="naver('work')">作品</a></li>
+       	  					<li><a href="javascript:void(0);" onclick="naver('contact')">联系</a></li>
 						</ul>
 						<div class="tie">
 							<img src="images/title.png"  >
@@ -884,8 +884,8 @@
 					</div>	
 				</div>
 			</div>
-			<div id="parallax_area2">				
-				<div class="waikuan-02">
+			<div id="parallax_area2"  >				
+				<div class="waikuan-02" id="A">
 					<div class="erzuoce">
 						<img src="images/about me.png">
 						<div class="age-line-waikuan">
@@ -1029,8 +1029,8 @@
 					</div>
 				</div>
 			</div>
-			<div id="parallax_area8">
-				<div class="waikuan-08">
+			<div id="parallax_area8" >
+				<div class="waikuan-08" id="work">
 					<div class="qizuoce">
 						<a href="lowpoly.html" target="_blank"><img src="images/work-l-1.png" class="work-l-1"></a>
 						<img src="images/work-l-2.png" class="work-l-2">
@@ -1061,11 +1061,11 @@
 						<img src="images/contact me.png" class="contact-me">
 						<img src="images/message.png" class="message">
 					</div>
-					<div class="zhong-09">
+					<div class="zhong-09" id="contact">
 						<div class="zuoce-09">
 							<div class="zuoce-09-l">
-								<div class="f-link-1"><a href="#parallax_area1">主页</a></div>
-								<div class="f-link-2"><a href="#parallax_area1">关于</a></div>
+								<div class="f-link-1"><a href="javascript:void(0);" onclick="naver('zhuye')">主页</a></div>
+								<div class="f-link-2"><a href="javascript:void(0);" onclick="naver('A')">关于</a></div>
 								<div class="f-link-3"><a href="#parallax_area1">微博</a></div>							
 							</div>
 							<div class="zuoce-09-m">
@@ -1134,6 +1134,14 @@ $(function() {
 	$('#parallax_area9').css('top',(0-(scrolled*.500))+'px');
   });
 });
+</script>
+<script>
+//设置锚点
+function naver(id){
+  var obj = document.getElementById(id);
+  var oPos = obj.offsetTop;
+  return window.scrollTo(0, oPos-36);
+}
 </script>
 	</body>
 </html>
